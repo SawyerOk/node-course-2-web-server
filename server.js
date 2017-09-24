@@ -23,10 +23,10 @@ app.use( (req, res, next)=>{
 
 
 
-app.use( (req, res, next)=>{
-    res.render('maintain.hbs');
+// app.use( (req, res, next)=>{
+//     res.render('maintain.hbs');
 
-});
+// });
 
 app.use(express.static(__dirname + '/public'));
 
@@ -43,6 +43,12 @@ app.get('/', (req, res) => {
         pageTitle: 'home page',
         welMessage : 'it was in lowerCAse!'
     });
+});
+
+app.get('/portfolio', (req, res)=> {
+    res.render('portfolio.hbs', {
+        
+    })
 });
 
 app.get('/about', (req, res)=>{
